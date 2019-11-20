@@ -3,6 +3,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import * as microsoftTeams from "@microsoft/teams-js";
 
 class App extends React.Component {
   constructor(props,context) {
@@ -24,6 +25,10 @@ class App extends React.Component {
     document.head.appendChild(script1);
     script1.onload = () => {
       initGiveAnywhere("#appreciate", "https://fs-prod.octanner.com/adfs/ls/IdpInitiatedSignOn.aspx?loginToRp=fed.appreciatehub.com")
+    }
+
+    microsoftTeams.getContext = (context) => {
+      console.log("microsoft teams context", context);
     }
   }  
 
