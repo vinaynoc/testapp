@@ -1,22 +1,21 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appreciate-button{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 100px;
+  background-color: bisque;
 }
 
-.App-link {
-  color: #09d3ac;
+#appreciate {
+  padding: 10px;
+  border: 1px solid white;
+  width: 80px;
+  background-color: slateblue;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+#appreciate:hover {
+  background-color: white;
+  color: slateblue;
 }
