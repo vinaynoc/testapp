@@ -26,7 +26,8 @@ class App extends React.Component {
     script1.onload = () => {
       initGiveAnywhere("#appreciate", "https://fs-prod.octanner.com/adfs/ls/IdpInitiatedSignOn.aspx?loginToRp=fed.appreciatehub.com")
     }
-
+    console.log("componendDidMount");
+    microsoftTeams.initialize();
     microsoftTeams.getContext = (context) => {
       console.log("microsoft teams context", context);
     }
