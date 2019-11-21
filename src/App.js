@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-useless-constructor */
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import * as microsoftTeams from "@microsoft/teams-js";
 
@@ -21,6 +20,7 @@ class App extends React.Component {
     document.head.appendChild(link);
     const script1 = document.createElement('script');
     script.async = true;
+
     script1.src="https://vision.appreciatehub.com/ui/givewidget/giveanywhere.js";
     document.head.appendChild(script1);
     script1.onload = () => {
@@ -29,6 +29,8 @@ class App extends React.Component {
     console.log("componendDidMount");
     microsoftTeams.initialize();
     microsoftTeams.getContext = (context) => {
+      alert("hello");
+      alert(context);
       console.log("microsoft teams context", context);
     }
   }  
